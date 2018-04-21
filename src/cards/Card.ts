@@ -10,30 +10,27 @@ class CardCompareResult {
 }
 
 class Card {
-    suite: Suite
-    rank: Rank
-    constructor(rank: Rank, suite: Suite) {
-        this.rank = rank
-        this.suite = suite
-    }
+    constructor(readonly rank: Rank, readonly suite: Suite) { }
 
-    public toString = (): String => `${this.rank} of ${this.suite.name}`
+    public toString = (): String => `${Rank[this.rank]} of ${this.suite.name}`.toLowerCase()
     public compare(card: Card): CardCompareResult {
         let result = new CardCompareResult()
 
         const compare: Number = this.rank - card.rank
-        if (compare > 1) result.greaterThan = true
-        else if (compare < 1) result.lessThan = true
+        if (compare > 0) result.greaterThan = true
+        else if (compare < 0) result.lessThan = true
         else result.equal = true
 
-        if (typeof(this.suite) === typeof(card.suite)) {
+        if (this.suite === card.suite) {
             result.sameSuite = true
             result.sameColor = true
         }
-        else if (this.suite.color === card.suite.color){
+        else if (this.suite.color === card.suite.color) {
             result.sameColor = true
         }
 
         return result
     }
 }
+
+export default Card

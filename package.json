@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/jest": "^22.2.3",
     "@types/lodash": "^4.14.107",
     "lodash": "^4.17.5",
     "vue": "^2.5.13",
@@ -34,8 +35,9 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+      "plugin:vue/recommended",
+      "eslint:recommended",
+      "tslint:recommended"
     ]
   },
   "postcss": {
