@@ -1,5 +1,5 @@
 
-enum Rank {
+export enum Rank {
     ACE = 1,
     TWO = 2,
     THREE = 3,
@@ -15,4 +15,4 @@ enum Rank {
     KING = 13,
 }
 
-export default Rank
+export const names = Object.keys(Rank).filter(r => typeof Rank[r as any] === 'string')

@@ -1,7 +1,7 @@
 import 'jest'
 import Card from '../Card'
-import { Spades, Hearts, Diamonds, Clubs } from '../Suites'
-import Rank from '../Rank'
+import { Spades, Hearts, Diamonds, Clubs } from '../Suite'
+import { Rank } from '../Rank'
 
 test('Constructor: number card', () => {
   const eightOfSpades = new Card(Rank.EIGHT, Spades)

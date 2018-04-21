@@ -1,10 +1,9 @@
 import Card from './Card'
-import Rank from './Rank'
-import * as Suites from './Suites'
+import * as Rank from './Rank'
+import * as Suite from './Suite'
 
-
-export default {
+export {
     Card,
     Rank,
-    Suites
+    Suite
 }

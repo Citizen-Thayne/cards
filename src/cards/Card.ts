@@ -1,5 +1,6 @@
-import { Suite } from './Suites'
-import Rank from './Rank'
+import { Suite, All as AllSuites } from './Suite'
+import { Rank } from './Rank'
+import { sample, range, random } from 'lodash';
 
 class CardCompareResult {
     greaterThan: Boolean = false
@@ -9,7 +10,7 @@ class CardCompareResult {
     sameSuite: Boolean = false
 }
 
-class Card {
+export default class Card {
     constructor(readonly rank: Rank, readonly suite: Suite) { }
 
     public toString = (): String => `${Rank[this.rank]} of ${this.suite.name}`.toLowerCase()
@@ -31,6 +32,8 @@ class Card {
 
         return result
     }
-}
 
-export default Card
+    static Random(): Card {
+        return new Card(random(1, 14), sample(AllSuites) as Suite)
+    }
+}
