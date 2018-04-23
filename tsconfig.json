@@ -3,6 +3,7 @@
     "target": "es2015",
     "module": "es2015",
     "strict": true,
+    "strictPropertyInitialization": false,
     "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -12,6 +13,7 @@
     "baseUrl": ".",
     "types": [
       "node",
+      "jest"
     ],
     "paths": {
       "@/*": [
@@ -22,7 +24,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
-    "tests/**/*.ts",
+    "tests/**/*.ts"
   ],
   "exclude": [
     "node_modules"

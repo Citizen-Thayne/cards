@@ -1,5 +1,5 @@
 
-export enum Color {
+enum Color {
     RED = 'red',
     BLACK = 'black'
 }
@@ -12,6 +12,7 @@ export class Suite {
     ) { }
 }
 
+export {Color}
 export const Hearts = new Suite(Color.RED, '♥', 'hearts')
 export const Diamonds = new Suite(Color.RED, '♦', 'diamonds')
 export const Clubs = new Suite(Color.BLACK, '♣', 'clubs')

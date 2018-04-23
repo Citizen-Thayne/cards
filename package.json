@@ -11,12 +11,18 @@
   "dependencies": {
     "@types/jest": "^22.2.3",
     "@types/lodash": "^4.14.107",
+    "@vue/eslint-config-typescript": "^3.0.0-beta.6",
     "lodash": "^4.17.5",
+    "node-sass": "^4.8.3",
+    "pug": "^2.0.3",
+    "sass-loader": "^7.0.1",
+    "tslint": "^5.9.1",
     "vue": "^2.5.13",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0"
   },
   "devDependencies": {
+    "@types/jest": "^22.0.1",
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
     "@vue/cli-plugin-typescript": "^3.0.0-beta.6",
@@ -35,10 +41,12 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "plugin:vue/recommended",
-      "eslint:recommended",
-      "tslint:recommended"
-    ]
+      "@vue/typescript",
+      "plugin:vue/recommended"
+    ],
+    "rules": {
+      "semicolon": "never"
+    }
   },
   "postcss": {
     "plugins": {

@@ -36,4 +36,7 @@ export default class Card {
     static Random(): Card {
         return new Card(random(1, 14), sample(AllSuites) as Suite)
     }
+    get name(): String {
+        return this.toString()
+    }
 }
